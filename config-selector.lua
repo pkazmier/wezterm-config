@@ -50,6 +50,9 @@ ConfigSelector.selector_action = function(self)
     window:perform_action(
       wezterm.action.InputSelector({
         action = wezterm.action_callback(function(win, _, _, label)
+          if not label then
+            return -- user cancelled
+          end
           local overrides = win:get_config_overrides() or {}
           self:select(overrides, label)
           win:set_config_overrides(overrides)
