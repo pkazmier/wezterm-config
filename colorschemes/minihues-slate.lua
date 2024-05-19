@@ -1,5 +1,5 @@
 local M = {}
-local name = "MiniHues - slate"
+local name = "MiniHues Slate"
 
 M.init = function()
   return name
