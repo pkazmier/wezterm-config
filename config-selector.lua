@@ -42,7 +42,11 @@ end
 
 ConfigSelector.select = function(self, config, item_name)
   local opts = self.config_items[item_name]
-  opts.mod.activate(config, item_name, opts.value)
+  if opts then
+    opts.mod.activate(config, item_name, opts.value)
+  else
+    error(string.format("'%s' not defined for %s", item_name, self.title))
+  end
 end
 
 ConfigSelector.selector_action = function(self)
