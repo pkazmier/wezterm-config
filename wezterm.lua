@@ -12,7 +12,7 @@ local schemes  = selector.new({ title = "Color Scheme Selector",  subdir = "colo
 local sizes    = selector.new({ title = "Font Size Selector",     subdir = "sizes" })
 -- stylua: ignore end
 
-fonts:select(config, "Berkeley Mono")
+fonts:select(config, "JetBrains Mono")
 schemes:select(config, "MiniHues Charcoal")
 
 -- Customize the tab title to show zoom icon when zoomed
