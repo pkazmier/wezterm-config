@@ -13,7 +13,7 @@ local sizes    = selector.new({ title = "Font Size Selector",     subdir = "size
 -- stylua: ignore end
 
 fonts:select(config, "Berkeley Mono")
-schemes:select(config, "MiniHues Slate")
+schemes:select(config, "MiniHues Charcoal")
 
 -- Customize the tab title to show zoom icon when zoomed
 wezterm.on("format-tab-title", function(tab)
