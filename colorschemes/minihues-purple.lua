@@ -8,9 +8,9 @@ end
 M.activate = function(config)
   config.color_schemes = config.color_schemes or {}
   config.color_schemes[name] = {
-    ansi = { "#151025", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#c0c8cb" },
+    ansi = { "#312c44", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#81888b" },
     background = "#151025",
-    brights = { "#312c44", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#a0a8ab" },
+    brights = { "#4d4962", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#a0a8ab" },
     compose_cursor = "#f0b995",
     copy_mode_active_highlight_bg = {
       Color = "#151025",
@@ -47,7 +47,6 @@ M.activate = function(config)
     selection_bg = "#4d4962",
     split = "#4d4962",
   }
-
   config.color_scheme = name
 end
 

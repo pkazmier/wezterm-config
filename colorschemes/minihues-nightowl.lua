@@ -1,5 +1,5 @@
 local M = {}
-local name = "MiniHues NightOwl"
+local name = "MiniHues Nightowl"
 
 M.init = function()
   return name
@@ -8,9 +8,9 @@ end
 M.activate = function(config)
   config.color_schemes = config.color_schemes or {}
   config.color_schemes[name] = {
-    ansi = { "#021d33", "#f5b1bb", "#a7d5a6", "#d3c88b", "#92d0f3", "#e1b5e4", "#87d8d1", "#c0c8cb" },
+    ansi = { "#1d3850", "#f5b1bb", "#a7d5a6", "#d3c88b", "#92d0f3", "#e1b5e4", "#87d8d1", "#838b8e" },
     background = "#021d33",
-    brights = { "#1d3850", "#f5b1bb", "#a7d5a6", "#d3c88b", "#92d0f3", "#e1b5e4", "#87d8d1", "#a2a9ac" },
+    brights = { "#38546e", "#f5b1bb", "#a7d5a6", "#d3c88b", "#92d0f3", "#e1b5e4", "#87d8d1", "#a2a9ac" },
     compose_cursor = "#f0b995",
     copy_mode_active_highlight_bg = {
       Color = "#021d33",
@@ -47,7 +47,6 @@ M.activate = function(config)
     selection_bg = "#38546e",
     split = "#38546e",
   }
-
   config.color_scheme = name
 end
 
