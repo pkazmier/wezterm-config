@@ -15,22 +15,6 @@ local sizes    = selector.new({ title = "Font Size Selector",     subdir = "size
 fonts:select(config, "Comic Code")
 schemes:select(config, "MiniHues Purple")
 
--- Customize the tab title to show zoom icon when zoomed
-wezterm.on("format-tab-title", function(tab)
-  local icon = ""
-  local attrs = {
-    { Background = { Color = "#333333" } },
-  }
-  if tab.active_pane.is_zoomed then
-    icon = "🔎 "
-    table.insert(attrs, { Foreground = { Color = "Orange" } })
-  end
-  table.insert(attrs, {
-    Text = tab.tab_index + 1 .. ": " .. icon .. tab.active_pane.title,
-  })
-  return attrs
-end)
-
 -- Configuration
 config.front_end = "WebGpu"
 config.force_reverse_video_cursor = true
@@ -39,7 +23,10 @@ config.use_resize_increments = false
 config.adjust_window_size_when_changing_font_size = false
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.window_frame = { font_size = 14 }
+config.window_frame = {
+  font = wezterm.font({ family = "JetBrains Mono", weight = "ExtraBold" }),
+  font_size = 12,
+}
 config.window_padding = {
   left = 0,
   right = 0,
@@ -87,5 +74,37 @@ config.key_tables = {
     { key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
   },
 }
+
+-- Add font name and size to status bar
+wezterm.on("update-right-status", function(window)
+  local font = fonts:active_item()
+  local size = window:effective_config().font_size
+  local status = wezterm.format({
+    "ResetAttributes",
+    { Background = { Color = "#666666" } },
+    { Foreground = { Color = "White" } },
+    { Text = string.format(" %s %spt  ", font, size) },
+  })
+  window:set_right_status(status)
+end)
+
+-- Customize the tab title to show zoom icon when zoomed
+wezterm.on("format-tab-title", function(tab)
+  local icon = ""
+  local attrs = {
+    { Background = { Color = "#333333" } },
+  }
+  if tab.is_active then
+    table.insert(attrs, { Foreground = { Color = "#CCCCCC" } })
+  end
+  if tab.active_pane.is_zoomed then
+    icon = "🔎 "
+    table.insert(attrs, { Foreground = { Color = "Orange" } })
+  end
+  table.insert(attrs, {
+    Text = tab.tab_index + 1 .. ":" .. icon .. tab.active_pane.title,
+  })
+  return attrs
+end)
 
 return config
