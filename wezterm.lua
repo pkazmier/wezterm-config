@@ -47,6 +47,8 @@ config.leader = { key = "o", mods = "SUPER", timeout_milliseconds = 1000 }
 -- stylua: ignore
 config.keys = {
   { key = "Return", mods = "ALT",    action = wezterm.action.DisableDefaultAssignment },
+  { key = "=",      mods = "SUPER",  action = act.EmitEvent "kaz-inc-font-size" },
+  { key = "-",      mods = "SUPER",  action = act.EmitEvent "kaz-dec-font-size" },
   { key = "[",      mods = "SUPER",  action = act.ActivatePaneDirection("Prev") },
   { key = "\\",     mods = "SUPER",  action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
   { key = "]",      mods = "SUPER",  action = act.ActivatePaneDirection("Next") },
@@ -74,6 +76,22 @@ config.key_tables = {
     { key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
   },
 }
+
+-- Event handlers
+
+-- Better inc/dec font size
+wezterm.on("kaz-inc-font-size", function(window)
+  local size = window:effective_config().font_size + 1
+  local overrides = window:get_config_overrides() or {}
+  overrides.font_size = size
+  window:set_config_overrides(overrides)
+end)
+wezterm.on("kaz-dec-font-size", function(window)
+  local size = window:effective_config().font_size - 1
+  local overrides = window:get_config_overrides() or {}
+  overrides.font_size = size
+  window:set_config_overrides(overrides)
+end)
 
 -- Add font name and size to status bar
 wezterm.on("update-right-status", function(window)
