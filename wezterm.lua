@@ -120,7 +120,7 @@ wezterm.on("format-tab-title", function(tab)
     table.insert(attrs, { Foreground = { Color = "Orange" } })
   end
   table.insert(attrs, {
-    Text = tab.tab_index + 1 .. ":" .. icon .. tab.active_pane.title,
+    Text = "[" .. tab.tab_index + 1 .. "] " .. icon .. tab.active_pane.title,
   })
   return attrs
 end)
