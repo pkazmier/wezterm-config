@@ -13,7 +13,7 @@ local sizes    = selector.new({ title = "Font Size Selector",     subdir = "size
 -- stylua: ignore end
 
 fonts:select(config, "Comic Code")
-schemes:select(config, "MiniHues Purple")
+schemes:select(config, "Gruvbox Material")
 
 -- Configuration
 config.front_end = "WebGpu"
