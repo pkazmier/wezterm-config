@@ -10,6 +10,7 @@ local inactive = selector.new({ title = "Inactive Pane Selector", subdir = "inac
 local leading  = selector.new({ title = "Font Leading Selector",  subdir = "leadings" })
 local schemes  = selector.new({ title = "Color Scheme Selector",  subdir = "colorschemes" })
 local sizes    = selector.new({ title = "Font Size Selector",     subdir = "sizes" })
+local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opacity" })
 -- stylua: ignore end
 
 fonts:select(config, "Comic Code")
@@ -57,6 +58,7 @@ config.keys = {
   { key = "i",      mods = "LEADER", action = inactive:selector_action() },
   { key = "l",      mods = "LEADER", action = leading:selector_action() },
   { key = "l",      mods = "SUPER",  action = act.RotatePanes("Clockwise") },
+  { key = "o",      mods = "LEADER", action = opacity:selector_action() },
   { key = "p",      mods = "LEADER", action = act.PaneSelect },
   { key = "p",      mods = "SUPER",  action = act.PaneSelect },
   { key = "r",      mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
