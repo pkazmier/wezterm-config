@@ -70,6 +70,7 @@ ConfigSelector.selector_action = function(self)
         title = self.title,
         choices = H.items_to_choices(self.config_items),
         fuzzy = true,
+        fuzzy_description = self.title .. ": ",
       }),
       pane
     )
