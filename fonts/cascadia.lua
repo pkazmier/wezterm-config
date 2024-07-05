@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local M = {}
-local name = "Cascadia Code NF"
+local name = "Cascadia Code"
 
 M.init = function()
   return name
@@ -15,12 +15,12 @@ M.activate = function(config)
     {
       intensity = "Normal",
       italic = false,
-      font = wezterm.font("Cascadia Code NF", { weight = "Light" }),
+      font = wezterm.font("Cascadia Code", { weight = "DemiLight" }),
     },
     {
       intensity = "Normal",
       italic = true,
-      font = wezterm.font("Cascadia Code NF", { weight = "Light", style = "Italic" }),
+      font = wezterm.font("Cascadia Code", { weight = "DemiLight", style = "Italic" }),
     },
   }
 end
