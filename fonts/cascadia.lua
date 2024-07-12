@@ -9,7 +9,7 @@ end
 M.activate = function(config)
   config.font = wezterm.font(name)
   config.font_size = 14.0
-  config.line_height = 1.3
+  config.line_height = 1.2
   config.harfbuzz_features = { "calt", "ss01" }
   config.font_rules = {
     {
