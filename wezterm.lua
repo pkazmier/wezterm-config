@@ -17,6 +17,8 @@ fonts:select(config, "PragmataPro")
 schemes:select(config, "MiniHues Purple")
 
 -- Configuration
+config.animation_fps = 20
+config.default_cursor_style = "BlinkingUnderline"
 config.front_end = "WebGpu"
 config.force_reverse_video_cursor = true
 
