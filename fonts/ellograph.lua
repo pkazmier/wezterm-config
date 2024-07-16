@@ -14,16 +14,16 @@ M.activate = function(config)
   config.line_height = 1.2
   config.harfbuzz_features = {}
   config.font_rules = {
-    {
-      intensity = "Normal",
-      italic = false,
-      font = wezterm.font(name, { weight = "Light" }),
-    },
-    {
-      intensity = "Normal",
-      italic = true,
-      font = wezterm.font(name, { weight = "Light", style = "Italic" }),
-    },
+    -- {
+    --   intensity = "Normal",
+    --   italic = false,
+    --   font = wezterm.font(name, { weight = "Light" }),
+    -- },
+    -- {
+    --   intensity = "Normal",
+    --   italic = true,
+    --   font = wezterm.font(name, { weight = "Light", style = "Italic" }),
+    -- },
     {
       intensity = "Bold",
       italic = false,
