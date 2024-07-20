@@ -99,7 +99,7 @@ end)
 
 -- Add font name and size to status bar
 wezterm.on("update-right-status", function(window)
-  local font = fonts:active_item()
+  local font = window:effective_config().font.font[1].family
   local size = window:effective_config().font_size
   local status = wezterm.format({
     "ResetAttributes",

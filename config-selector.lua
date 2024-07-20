@@ -8,7 +8,6 @@ ConfigSelector.new = function(opts)
   local self = setmetatable({}, { __index = ConfigSelector })
   self.title = opts.title or "Config Selector"
   self.config_items = {}
-  self.active_item_name = nil
 
   local dir = wezterm.config_dir .. sep .. opts.subdir
   for _, path in ipairs(wezterm.read_dir(dir)) do
@@ -41,15 +40,10 @@ ConfigSelector.register = function(self, module_name)
   end
 end
 
-ConfigSelector.active_item = function(self)
-  return self.active_item_name
-end
-
 ConfigSelector.select = function(self, config, item_name)
   local opts = self.config_items[item_name]
   if opts then
     opts.mod.activate(config, item_name, opts.value)
-    self.active_item_name = item_name
   else
     error(string.format("'%s' not defined for %s", item_name, self.title))
   end
