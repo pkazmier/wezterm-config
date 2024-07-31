@@ -27,7 +27,7 @@ M.activate = function(config)
       "#00BFFF",
       "#AD6FF7",
       "#4CD4BD",
-      "#8E94AB",
+      "#D2DBFA",
     },
     compose_cursor = "#c1c9e6",
     copy_mode_active_highlight_bg = {
