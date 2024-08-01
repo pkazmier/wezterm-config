@@ -11,7 +11,14 @@ M.activate = function(config)
   -- config.freetype_render_target = "HorizontalLcd"
   config.font_size = 14.0
   config.line_height = 1.4
-  config.harfbuzz_features = { "ss01", "ss02", "cv02", "cv08" }
+  config.harfbuzz_features = {
+    "ss01",
+    "ss02",
+    "ss03",
+    "ss04",
+    "ss05",
+    "cv07",
+  }
   config.font_rules = {}
 end
 
