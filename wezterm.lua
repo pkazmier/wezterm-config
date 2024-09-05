@@ -13,8 +13,8 @@ local sizes    = selector.new({ title = "Font Size Selector",     subdir = "size
 local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opacity" })
 -- stylua: ignore end
 
-fonts:select(config, "PragmataPro")
-schemes:select(config, "MiniHues Purple")
+fonts:select(config, "0xProto")
+schemes:select(config, "Gruvbox Material (Hard)")
 
 -- Configuration
 config.animation_fps = 20
