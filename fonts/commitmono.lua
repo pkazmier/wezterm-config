@@ -18,6 +18,7 @@ M.activate = function(config)
     "ss04",
     "ss05",
     "cv07",
+    "cv08",
   }
   config.font_rules = {}
 end
