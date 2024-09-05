@@ -14,7 +14,7 @@ local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opac
 -- stylua: ignore end
 
 fonts:select(config, "0xProto")
-schemes:select(config, "Gruvbox Material (Hard)")
+schemes:select(config, "Ayu Custom")
 
 -- Configuration
 config.animation_fps = 20
