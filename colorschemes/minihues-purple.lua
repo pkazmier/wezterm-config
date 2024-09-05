@@ -8,44 +8,44 @@ end
 M.activate = function(config)
   config.color_schemes = config.color_schemes or {}
   config.color_schemes[name] = {
-    ansi = { "#312c44", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#81888b" },
+    ansi = { "#2f2b42", "#e4a6c1", "#aec58d", "#d6b680", "#7cc8dc", "#c8aee4", "#85ccb4", "#7b8184" },
     background = "#151025",
-    brights = { "#4d4962", "#f5b1bb", "#a6d5a7", "#d2c88b", "#93cff3", "#e2b5e3", "#87d8d2", "#a0a8ab" },
-    compose_cursor = "#f0b995",
+    brights = { "#4a455e", "#e4a6c1", "#aec58d", "#d6b680", "#7cc8dc", "#c8aee4", "#85ccb4", "#999ea1" },
+    compose_cursor = "#e9a998",
     copy_mode_active_highlight_bg = {
       Color = "#151025",
     },
     copy_mode_active_highlight_fg = {
-      Color = "#a0a8ab",
+      Color = "#999ea1",
     },
     copy_mode_inactive_highlight_bg = {
-      Color = "#a6d5a7",
+      Color = "#aec58d",
     },
     copy_mode_inactive_highlight_fg = {
       Color = "#151025",
     },
-    cursor_bg = "#93cff3",
-    cursor_border = "#93cff3",
-    cursor_fg = "#003249",
-    foreground = "#c0c8cb",
+    cursor_bg = "#7cc8dc",
+    cursor_border = "#7cc8dc",
+    cursor_fg = "#00404d",
+    foreground = "#B6BCBF",
     indexed = {
-      [136] = "#f0b995",
+      [136] = "#e9a998",
     },
     quick_select_label_bg = {
-      Color = "#f0b995",
+      Color = "#e9a998",
     },
     quick_select_label_fg = {
       Color = "#151025",
     },
     quick_select_match_bg = {
-      Color = "#312c44",
+      Color = "#2f2b42",
     },
     quick_select_match_fg = {
-      Color = "#93cff3",
+      Color = "#7cc8dc",
     },
-    scrollbar_thumb = "#312c44",
-    selection_bg = "#4d4962",
-    split = "#4d4962",
+    scrollbar_thumb = "#2f2b42",
+    selection_bg = "#4a455e",
+    split = "#4a455e",
   }
   config.color_scheme = name
 end
