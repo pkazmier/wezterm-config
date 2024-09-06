@@ -14,7 +14,7 @@ local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opac
 -- stylua: ignore end
 
 fonts:select(config, "0xProto")
-schemes:select(config, "Ayu Custom")
+schemes:select(config, "Catppuccin Mocha")
 
 -- Configuration
 config.animation_fps = 20
