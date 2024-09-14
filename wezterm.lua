@@ -13,7 +13,7 @@ local sizes    = selector.new({ title = "Font Size Selector",     subdir = "size
 local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opacity" })
 -- stylua: ignore end
 
-fonts:select(config, "0xProto")
+fonts:select(config, "Codelia")
 schemes:select(config, "Catppuccin Mocha")
 
 -- Configuration
