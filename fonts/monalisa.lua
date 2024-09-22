@@ -18,7 +18,18 @@ M.activate = function(config)
     "ss14",
     -- "ss16", -- stab-less 'r'
   }
-  config.font_rules = {}
+  config.font_rules = {
+    {
+      intensity = "Bold",
+      italic = false,
+      font = wezterm.font("MonoLisa", { weight = "Black" }),
+    },
+    {
+      intensity = "Bold",
+      italic = true,
+      font = wezterm.font("MonoLisa", { weight = "Black", style = "Italic" }),
+    },
+  }
 end
 
 return M
