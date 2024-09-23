@@ -22,12 +22,12 @@ M.activate = function(config)
     {
       intensity = "Bold",
       italic = false,
-      font = wezterm.font("MonoLisa", { weight = "Black" }),
+      font = wezterm.font("MonoLisa", { weight = "ExtraBold" }),
     },
     {
       intensity = "Bold",
       italic = true,
-      font = wezterm.font("MonoLisa", { weight = "Black", style = "Italic" }),
+      font = wezterm.font("MonoLisa", { weight = "ExtraBold", style = "Italic" }),
     },
   }
 end
