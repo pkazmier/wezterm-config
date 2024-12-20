@@ -14,7 +14,7 @@ local opacity  = selector.new({ title = "Opacity Selector",       subdir = "opac
 -- stylua: ignore end
 
 fonts:select(config, "MonoLisa")
-schemes:select(config, "Catppuccin Mocha")
+schemes:select(config, "Tokyo Night Moon")
 
 -- Configuration
 config.front_end = "WebGpu"
